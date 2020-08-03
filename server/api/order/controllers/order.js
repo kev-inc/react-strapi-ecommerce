@@ -15,10 +15,11 @@ module.exports = {
     } else {
       entity = await strapi.services.order.create(ctx.request.body);
     }
+    
     let entry = sanitizeEntity(entity, { model: strapi.models.order });
     await strapi.plugins['email'].services.email.send({
-      to: 'hayabusazxy@gmail.com',
-      from: 'lamodeclassique2017@gmail.com',
+      to: entry['email'],
+      from: process.env.SENDGRID_EMAIL,
       subject: 'Order Confirmed!',
       text: `hello world`
     })
