@@ -33,6 +33,18 @@
     },
     "totalprice": {
       "type": "decimal"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pendingpayment",
+        "processing",
+        "completed",
+        "onhold",
+        "cancelled",
+        "refunded",
+        "failed"
+      ]
     }
   }
 }
