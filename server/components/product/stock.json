@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_stocks",
+  "info": {
+    "name": "stock",
+    "icon": "box-open"
+  },
+  "options": {},
+  "attributes": {
+    "managestock": {
+      "type": "boolean"
+    },
+    "stockstatus": {
+      "type": "enumeration",
+      "enum": [
+        "instock",
+        "outofstock"
+      ]
+    },
+    "soldindividually": {
+      "type": "boolean"
+    },
+    "stockquantity": {
+      "type": "integer"
+    }
+  }
+}

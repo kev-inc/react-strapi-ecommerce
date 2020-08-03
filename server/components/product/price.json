@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_prices",
+  "info": {
+    "name": "price",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "regularprice": {
+      "type": "decimal"
+    },
+    "saleprice": {
+      "type": "decimal"
+    }
+  }
+}

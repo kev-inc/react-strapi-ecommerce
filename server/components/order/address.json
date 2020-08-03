@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_order_addresses",
+  "info": {
+    "name": "address",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "addressline1": {
+      "type": "string"
+    },
+    "addressline2": {
+      "type": "string"
+    },
+    "postalcode": {
+      "type": "string"
+    }
+  }
+}

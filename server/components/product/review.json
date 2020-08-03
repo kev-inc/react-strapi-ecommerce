@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_reviews",
+  "info": {
+    "name": "review",
+    "icon": "comment-dots"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}
