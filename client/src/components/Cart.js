@@ -36,7 +36,10 @@ function placeOrder(e, cart) {
     totalprice: cart.map(item => item['price']['regularprice']).reduce((total, item) => total + item), // TODO: check for sale price
     status: 'pendingpayment'
   }
-  postOrder(postData).then(() => alert('Order sent!')).catch(err => alert(err))
+  postOrder(postData).then(() => {
+    alert('Order sent!')
+    clearCart()
+  }).catch(err => alert(err))
 }
 function Cart() {
   let cart = localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart'))
@@ -50,14 +53,14 @@ function Cart() {
       <h3>Cart</h3>
       <ol>
       {cart.map((item, index) => (
-        <li>{item.name} (${item['price']['regularprice']})</li>
+        <li key={index}>{item.name} (${item['price']['regularprice']})</li>
       ))}
       </ol>
       <h5>Total: ${cart.map((item, index) => item['price']['regularprice']).reduce((total, item) => total + item)}</h5>
       <button onClick={() => clearCart()}>Clear cart</button>
       <h3>Personal Information</h3>
       <form onSubmit={e => placeOrder(e, cart)}>
-        <label or="fname">First name:</label><br/>
+        <label for="fname">First name:</label><br/>
         <input type="text" id='fname' name='fname'/><br/>
         
         <label for="lname">Last name:</label><br/>
